@@ -37,7 +37,7 @@ public class View {
 	}
 	
 	public static void mostrarCancion(String mostrarCancion) {
-		JOptionPane.showMessageDialog(null,"tu cancion es: \n"+mostrarCancion+"\n"+">>>>>>>>>tu cancion ha diso guardada en C://data<<<<<<<<<<<");
+		JOptionPane.showMessageDialog(null,"tu cancion es: \n"+mostrarCancion+"\n"+">>>>>>>>>tu cancion ha sido guardada en C://data<<<<<<<<<<<");
 	}
 	
 	public static void mostarSalida() {
