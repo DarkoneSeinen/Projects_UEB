@@ -36,17 +36,14 @@ public class View {
 		return JOptionPane.showInputDialog(null, "Digite el nombre que desea ponerle al archivo"); 
 	}
 	
-	public static void mostarCancion(String mostrarCancion) {
+	public static void mostrarCancion(String mostrarCancion) {
 		JOptionPane.showMessageDialog(null,"tu cancion es: \n"+mostrarCancion+"\n"+">>>>>>>>>tu cancion ha diso guardada en C://data<<<<<<<<<<<");
 	}
 	
 	public static void mostarSalida() {
 		JOptionPane.showMessageDialog(null,"Gracias por usar el programa");
 	}
-	///////////////////////////////propiedades/////////////////////////////////////////////////////////
-	public void mostrarArchivo(String gestionarArchivo) {
-		JOptionPane.showMessageDialog(null, gestionarArchivo);
-	}
+	
 	///////////////////////////////////JFileChooser///////////////////////////
 	
 	private JFileChooser fileChooser;

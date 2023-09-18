@@ -31,8 +31,7 @@ public class Controller {
 				break;
 				
 			case 2:{
-				view.mostarCancion(composer.obtenerArchivos()+"\n");
-				
+				view.mostrarCancion(composer.obtenerArchivos());
 				composer.gestionarPropiedades();
 				break;
 			}
