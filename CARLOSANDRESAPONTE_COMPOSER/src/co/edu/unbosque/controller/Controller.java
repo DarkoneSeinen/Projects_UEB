@@ -31,9 +31,9 @@ public class Controller {
 				break;
 				
 			case 2:{
-				/*view.mostarCancion(composer.obtenerArchivos()+"\n");*/
-				view.mostarCancion(composer.mostrarCancion(composer.getNombres(), composer.getAcciones(), composer.getAdjetivo(), composer.getActitud(), composer.getDia(), composer.getVerbos(), composer.getEstrofas(), composer.getVersos()));
-				view.mostrarArchivo(composer.gestionarPropiedades());
+				view.mostarCancion(composer.obtenerArchivos()+"\n");
+				
+				composer.gestionarPropiedades();
 				break;
 			}
 			case 3:{

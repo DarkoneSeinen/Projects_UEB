@@ -43,7 +43,7 @@ public class Composer {
 		int diaRandom = obtenerRandom(dia.length);
 		int actitudRandom = obtenerRandom(actitud.length);
 		
-		String versoFinal=nombres[nombreRandom]+" "+verbos[verboRandom]+" "+acciones[accionRandom]+" "+adjetivo[adjetivoRandom]+" "+dia[diaRandom]+" "+actitud[actitudRandom]+"\n";
+		String versoFinal="\n"+nombres[nombreRandom]+" "+verbos[verboRandom]+" "+acciones[accionRandom]+" "+adjetivo[adjetivoRandom]+" "+dia[diaRandom]+" "+actitud[actitudRandom]+"\n";
         reguetton+=versoFinal;
 		
 		}
@@ -69,12 +69,12 @@ public class Composer {
     public void crearArchivos() {
 	
 		archivo.setArchivoData("c:\\data\\archivo_"+nombre+".txt");
-		archivo.escibirArchivo(mostrarCancion(nombres, adjetivo, verbos, acciones, dia, actitud, versos, estrofas)+"\n");
+		archivo.escibirArchivo(mostrarCancion(nombres, adjetivo, verbos, acciones, dia, actitud, versos, estrofas));
 	
      }
     
     public String obtenerArchivos() {
-		String contenido = "";
+		String contenido = " ";
 		
 		 	archivo.setArchivoData("c:\\data\\archivo_"+nombre+".txt");
 		 	contenido +=archivo.leerArchivo()+"\n";
