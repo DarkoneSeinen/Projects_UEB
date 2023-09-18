@@ -34,7 +34,7 @@ public class Composer {
 		
 		reguetton+="///////////////////////////////estrofa "+(i+1)+"////////////////////////////////////////"+"\n";
 			
-		for(int j=0;j<=(versos-1);j++) {// form para el versos
+		for(int j=0;j<=(versos-1);j++) {// for para el versos
 			
 		int nombreRandom = obtenerRandom(nombres.length);
 		int verboRandom = obtenerRandom(verbos.length);
