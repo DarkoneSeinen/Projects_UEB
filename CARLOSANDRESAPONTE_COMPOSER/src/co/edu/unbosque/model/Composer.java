@@ -43,7 +43,7 @@ public class Composer {
 		int diaRandom = obtenerRandom(dia.length);
 		int actitudRandom = obtenerRandom(actitud.length);
 		
-		String versoFinal="\n"+nombres[nombreRandom]+" "+verbos[verboRandom]+" "+acciones[accionRandom]+" "+adjetivo[adjetivoRandom]+" "+dia[diaRandom]+" "+actitud[actitudRandom]+"\n";
+		String versoFinal=nombres[nombreRandom]+" "+verbos[verboRandom]+" "+acciones[accionRandom]+" "+adjetivo[adjetivoRandom]+" "+dia[diaRandom]+" "+actitud[actitudRandom]+"\n";
         reguetton+=versoFinal;
 		
 		}
