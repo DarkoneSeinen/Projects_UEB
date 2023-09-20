@@ -10,11 +10,13 @@ public class Propiedades {
 	
 	private String archivoprop="c://data//archivo.properties";
 	
-	public int escribirPropiedades() {
+	public int escribirPropiedades(String nombre, int versos, int estrofas) {
 		
 		try {
-			prop.setProperty("NombreProyecto","CARLLOSANDRESAPONTE_COMPOSER");
-			prop.setProperty("NombreArchivo","CARLLOSANDRESAPONTE_COMPOSER.properties");
+			prop.setProperty("NombreProyecto","CARLOSANDRESAPONTE_COMPOSER");
+			prop.setProperty("NombreArchivo",""+nombre+".properties");
+			prop.setProperty("Numero Versos",""+versos+".properties");
+			prop.setProperty("Numero estrofas",""+estrofas+".properties");
 			prop.setProperty("NombreCodigoFuente","CARLOSANDRESAPONTE_COMPOSER.Java");
 			prop.store(new FileOutputStream(archivoprop),null);
 			

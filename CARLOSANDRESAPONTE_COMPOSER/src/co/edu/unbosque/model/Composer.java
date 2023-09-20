@@ -48,7 +48,7 @@ public class Composer {
 		
 		}
 	}
-		return reguetton;
+		return reguetton+"\n";
 	
 	
 	}
@@ -56,7 +56,7 @@ public class Composer {
     public String gestionarPropiedades() {
 		Propiedades prop= new Propiedades();
 		
-		prop.escribirPropiedades();
+		prop.escribirPropiedades(nombre, estrofas, estrofas);
 		return"propiedades del proyecto: "+"\n"+prop.leerPropiedades();
 		
 	}
@@ -68,7 +68,7 @@ public class Composer {
     
     public void crearArchivos() {
 	
-		archivo.setArchivoData("c:\\data\\archivo_"+nombre+".txt");
+		archivo.setArchivoData("c:\\data\\"+nombre+".txt");
 		archivo.escibirArchivo(mostrarCancion(nombres, adjetivo, verbos, acciones, dia, actitud, versos, estrofas));
 	
      }
@@ -76,12 +76,13 @@ public class Composer {
     public String obtenerArchivos() {
 		String contenido = " ";
 		
-		 	archivo.setArchivoData("c:\\data\\archivo_"+nombre+".txt");
+		 	archivo.setArchivoData("c:\\data\\"+nombre+".txt");
 		 	contenido +=archivo.leerArchivo()+"\n";
 		
 		return contenido;
 	}
     
+  
     
     
     

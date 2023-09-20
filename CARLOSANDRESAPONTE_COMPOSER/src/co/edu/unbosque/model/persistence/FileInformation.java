@@ -41,7 +41,7 @@ public class FileInformation  {
 			linea=br.readLine();// toma el valor de la primera  linea
 			
 			while(linea!=null) {
-				cadena+= linea;
+				cadena+= linea+"\n";
 				linea=br.readLine();
 			}
 			

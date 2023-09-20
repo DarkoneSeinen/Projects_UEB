@@ -36,6 +36,7 @@ public class Controller {
 			}
 			case 3:{
 				view.mostrarSeleccionArchivo();
+				
 				break;
 			}
 			
