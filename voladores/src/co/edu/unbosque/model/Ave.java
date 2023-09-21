@@ -1,6 +1,6 @@
 package co.edu.unbosque.model;
 
-public class Ave extends Animal implements Volador{
+public class Ave extends Animal implements Volador, Velocidad{
 
 	@Override
 	public String comer() {
@@ -9,7 +9,7 @@ public class Ave extends Animal implements Volador{
 	}
 	
 	public String crearNido() {
-		return " un ave puede cerar su nido, ";
+		return " un ave puede crear su nido, ";
 	}
 
 	public String ponerHuevos() {
@@ -25,13 +25,19 @@ public class Ave extends Animal implements Volador{
 	@Override
 	public String aterrizar() {
 		// TODO Auto-generated method stub
-		return " un ave puede aterizar con sus patas, ";
+		return " un ave puede aterrizar con sus patas, ";
 	}
 
 	@Override
 	public String volar() {
 		// TODO Auto-generated method stub
-		return " un ave vuela con sus alas";
+		return " un ave vuela con sus alas, ";
+	}
+
+	@Override
+	public String verVelocidad() {
+		// TODO Auto-generated method stub
+		return "un ave puede alcanzar una velocidad 60 km/h em promedio.";
 	}
 
 }

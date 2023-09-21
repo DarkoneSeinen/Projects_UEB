@@ -1,11 +1,9 @@
 package co.edu.unbosque.model;
 
-public class Kryptonian extends Animal {
+public  abstract class Kryptonian extends Animal {
+	
+	public abstract String verMuerte();
 
-	@Override
-	public String comer() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 }

@@ -1,11 +1,11 @@
 package co.edu.unbosque.model;
 
-public class Superman extends Animal implements Volador{
+public class Superman extends Kryptonian implements Volador, Velocidad{
 
 	@Override
 	public String comer() {
 		// TODO Auto-generated method stub
-		return " Superman come xd, y caga, ";
+		return " Superman come, ";
 	}
 
 	public String saltar() {
@@ -31,7 +31,19 @@ public class Superman extends Animal implements Volador{
 	@Override
 	public String volar() {
 		// TODO Auto-generated method stub
-		return " superman puede volar";
+		return " superman puede volar, ";
+	}
+
+	@Override
+	public String verMuerte() {
+		// TODO Auto-generated method stub
+		return "Superman puede morir por la kryptonita, " ;
+	}
+
+	@Override
+	public String verVelocidad() {
+		// TODO Auto-generated method stub
+		return "Su perman puede alcanzar la velcidad del sonido.";
 	}
 
 }
