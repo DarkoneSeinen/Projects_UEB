@@ -13,13 +13,13 @@ public class Superman extends Kryptonian implements Volador, Velocidad{
 	}
 
 	public String escudarBalas() {
-		return " Superman es inmuen a las balas, ";
+		return " Superman es inmune a las balas, ";
 	}
 
 	@Override
 	public String despegar() {
 		// TODO Auto-generated method stub
-		return " superman puede depsgar con un gran salto, ";
+		return " superman puede despegar con un gran salto, ";
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class Superman extends Kryptonian implements Volador, Velocidad{
 	@Override
 	public String verVelocidad() {
 		// TODO Auto-generated method stub
-		return "Su perman puede alcanzar la velcidad del sonido.";
+		return "Superman puede alcanzar la velcidad del sonido.";
 	}
 
 }
