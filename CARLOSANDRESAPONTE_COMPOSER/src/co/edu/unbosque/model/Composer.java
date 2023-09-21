@@ -18,7 +18,7 @@ public class Composer {
 	String[]acciones ={"encendelte","amalte","ligal","jugal"};
 	String[]adjetivo= {"suave","lento","lapido","fuelte"};
 	String[]dia= {"hasta que salga el sol","toda la noche","hasta el amanecel","todo el dia"};
-	String[]actitud= {"sin anestesia","sin complomiso","feis to feis","sin miedo"};
+	String[]actitud= {"sin anestesia","sin complomiso","feis to feis","sin miedo."};
 	
 	public static int obtenerRandom(int rango) {
         Random random = new Random();
