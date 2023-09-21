@@ -33,7 +33,7 @@ public class View {
 	
 	
 	public String obtenerNombreArchivo() {
-		return JOptionPane.showInputDialog(null, "Digite el nombre que desea ponerle al archivo"); 
+		return JOptionPane.showInputDialog(null, "Digite el nombre que desea ponerle a la cancion"); 
 	}
 	
 	public static void mostrarCancion(String mostrarCancion) {
