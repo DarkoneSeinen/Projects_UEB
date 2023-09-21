@@ -29,7 +29,7 @@ public class Shazam extends Animal implements Velocidad, Volador  {
 	@Override
 	public String volar() {
 		// TODO Auto-generated method stub
-		return "shazam puede volar ";
+		return "shazam puede volar.";
 	}
 
 	
