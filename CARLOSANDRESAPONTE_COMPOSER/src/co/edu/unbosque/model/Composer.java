@@ -79,6 +79,7 @@ public class Composer {
 		 	archivo.setArchivoData("c:\\data\\"+nombre+".txt");
 		 	contenido +=archivo.leerArchivo()+"\n";
 		
+		
 		return contenido;
 	}
     
