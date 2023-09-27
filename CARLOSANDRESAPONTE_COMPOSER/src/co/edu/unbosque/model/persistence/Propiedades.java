@@ -15,8 +15,8 @@ public class Propiedades {
 		try {
 			prop.setProperty("NombreProyecto","CARLOSANDRESAPONTE_COMPOSER");
 			prop.setProperty("NombreArchivo",""+nombre+".properties");
-			prop.setProperty("NumeroVersos",""+versos+".properties");
 			prop.setProperty("NumeroEstrofas",""+estrofas+".properties");
+			prop.setProperty("NumeroVersos",""+versos+".properties");
 			prop.store(new FileOutputStream(archivoprop),null);
 			
 		}catch(IOException e) {
@@ -34,9 +34,8 @@ public class Propiedades {
 			
 			linea+="nombre del poryecto: "+prop.getProperty("NombreProyecto")+"\n";
 			linea+="nombre del archivo: "+prop.getProperty("NombreArchivo")+"\n";
-			linea+="numero de estrofas: "+prop.getProperty("NumeroEstrofas")+"\n";
 			linea+="numero de versos: "+prop.getProperty("NumeroVersos")+"\n";	
-			
+			linea+="numero de estrofas: "+prop.getProperty("NumeroEstrofas")+"\n";
 
 
 			

@@ -56,7 +56,7 @@ public class Composer {
     public String gestionarPropiedades() {
 		Propiedades prop= new Propiedades();
 		
-		prop.escribirPropiedades(nombre, estrofas, estrofas);
+		prop.escribirPropiedades(nombre, versos, estrofas);
 		return"propiedades del proyecto: "+"\n"+prop.leerPropiedades();
 		
 	}
