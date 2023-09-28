@@ -2,8 +2,6 @@ package co.edu.unbosque.model.persistence;
 
 import java.io.*;
 
-import co.edu.unbosque.model.Composer;
-
 
 public class FileInformation  {
 	
@@ -11,22 +9,33 @@ public class FileInformation  {
     private String archivoData="c://data//archivo.txt";
 	
 	public int escibirArchivo(String dato) {
-		File f= new File(this.archivoData);
-		
-		try {
-			FileWriter fw= new FileWriter(f);
-			PrintWriter pw= new PrintWriter(fw);
-			
-			pw.println(dato);
-			
-			fw.close();// cerrar el archivo
-			
-		
-		}catch(IOException e) {
-			return -1;
-		}
-		return 0;
-		
+		File carpetaData = new File("c://data");
+	    
+	    
+	    if (!carpetaData.exists()) {
+	        if (carpetaData.mkdirs()) {
+	            System.out.println("Carpeta 'data' creada exitosamente.");
+	        } else {
+	            System.err.println("No se pudo crear la carpeta 'data'.");
+	            return -1; 
+	        }
+	    }
+
+	   
+	    File archivo = new File(this.archivoData);
+
+	    try {
+	        FileWriter fw = new FileWriter(archivo);
+	        PrintWriter pw = new PrintWriter(fw);
+
+	        pw.println(dato);
+
+	        fw.close(); 
+
+	    } catch (IOException e) {
+	        return -1; 
+	    }
+	    return 0; 
 	}
 	
 	public String leerArchivo() {
