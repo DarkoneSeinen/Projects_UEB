@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.JPanel;
 
-public class PanelJugador extends JPanel {
+public class PanelJugador extends JFrame {
 
 	/**
 	 * 

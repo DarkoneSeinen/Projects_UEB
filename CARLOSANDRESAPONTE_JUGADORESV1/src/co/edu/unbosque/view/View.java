@@ -15,10 +15,13 @@ public class View extends JFrame {
 	private PanelMenu menu;
 	private PanelJugador jugador;
 	
+	
+	
 ;
 
 	public View(Controller control) {
 		// TODO Auto-generated constructor stub
+		
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(600, 600);
@@ -28,6 +31,8 @@ public class View extends JFrame {
 		setLayout(new BorderLayout());
 		
 		menu= new PanelMenu();
+		menu.getBtnjugador().addActionListener(control);
+		jugador = new PanelJugador();
 		
 		add(menu,BorderLayout.CENTER);
 		

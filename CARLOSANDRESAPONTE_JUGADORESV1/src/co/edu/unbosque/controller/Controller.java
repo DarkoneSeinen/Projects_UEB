@@ -19,7 +19,8 @@ public class Controller implements ActionListener {
 	public void actionPerformed(ActionEvent evento) {
 		// TODO Auto-generated method stub
 		if(evento.getActionCommand().equals(gui.getMenu().JUGADOR)) {
-			
+			gui.getJugador().setVisible(true);
+			System.out.println("si");
 			
 		}
 	}
