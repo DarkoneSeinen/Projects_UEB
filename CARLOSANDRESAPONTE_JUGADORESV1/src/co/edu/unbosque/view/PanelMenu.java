@@ -17,7 +17,7 @@ public class PanelMenu extends JPanel {
 	public String JUGADOR="JUGADOR";
 	private String JUEGO="JUEGO";
 	private String PARTIDA="PARTIDA";
-	private String TORNEO="Torneo";
+	private String TORNEO="TORNEO";
 	
 	public PanelMenu() {
 		setLayout(new GridLayout(2,2,10,10));

@@ -13,7 +13,7 @@ public class View extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	private PanelMenu menu;
-	private PanelJugador jugador;
+	private VentanaJugador jugador;
 	
 	
 	
@@ -32,7 +32,7 @@ public class View extends JFrame {
 		
 		menu= new PanelMenu();
 		menu.getBtnjugador().addActionListener(control);
-		jugador = new PanelJugador();
+		jugador = new VentanaJugador();
 		
 		add(menu,BorderLayout.CENTER);
 		
@@ -48,11 +48,11 @@ public class View extends JFrame {
 		this.menu = menu;
 	}
 
-	public PanelJugador getJugador() {
+	public VentanaJugador getJugador() {
 		return jugador;
 	}
 
-	public void setJugador(PanelJugador jugador) {
+	public void setJugador(VentanaJugador jugador) {
 		this.jugador = jugador;
 	}
 

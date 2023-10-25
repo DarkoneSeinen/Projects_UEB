@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.JPanel;
 
-public class PanelJugador extends JFrame {
+public class VentanaJugador extends JFrame {
 
 	/**
 	 * 
@@ -15,10 +15,18 @@ public class PanelJugador extends JFrame {
 	private JTextField entradoc, entradanombre, entradaedad;
 	private JButton Agregar;
 	
-	public final String AGREGAR="agregar";
+	public final String AGREGAR="AGREGAR";
 
-	public PanelJugador() {
-		setLayout(new GridLayout(4,2));
+	public VentanaJugador() {
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(600, 600);
+		setResizable(false);
+		setTitle("Jugador");
+		setLocationRelativeTo(null); 
+		setLayout(new BorderLayout());
+		
+		setLayout(new GridLayout(4, 2));
 		
 		documento= new JLabel("Documento");
 		entradoc= new JTextField();
@@ -32,9 +40,12 @@ public class PanelJugador extends JFrame {
 		Agregar= new JButton("AGREGAR");
 		
 		add(documento);
+		add(entradoc);
 		add(nombre);
+		add(entradanombre);
 		add(edad);
-		
+		add(entradaedad);
+	
 		add(Agregar);
 		
 	}
