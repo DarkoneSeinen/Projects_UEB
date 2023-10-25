@@ -35,4 +35,25 @@ public class View extends JFrame {
 		
 	}
 
+	public PanelMenu getMenu() {
+		return menu;
+	}
+
+	public void setMenu(PanelMenu menu) {
+		this.menu = menu;
+	}
+
+	public PanelJugador getJugador() {
+		return jugador;
+	}
+
+	public void setJugador(PanelJugador jugador) {
+		this.jugador = jugador;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+
 }
