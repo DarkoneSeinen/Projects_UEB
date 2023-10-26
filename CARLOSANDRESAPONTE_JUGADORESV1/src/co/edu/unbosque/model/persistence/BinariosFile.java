@@ -7,7 +7,7 @@ import co.edu.unbosque.model.JugadorDTO;
 
 public class BinariosFile {
 	
-	private String ruta = "./data/prueba.out";
+	private String ruta = "./data/jugador.out";
 	private String rutaReg = "./data/registro.out";
 
 	

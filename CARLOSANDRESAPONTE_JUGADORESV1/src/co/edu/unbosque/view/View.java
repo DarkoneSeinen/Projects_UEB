@@ -53,6 +53,10 @@ public class View extends JFrame {
 		
 		
 	}
+	
+	public void mostrarMensaje() {
+		 JOptionPane.showMessageDialog(null,"jugador resgistrado");
+	}
 
 	public PanelMenu getMenu() {
 		return menu;

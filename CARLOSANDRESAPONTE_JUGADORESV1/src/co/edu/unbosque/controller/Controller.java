@@ -58,6 +58,8 @@ public class Controller implements ActionListener {
 		gestorJugador.getJugador().add(new JugadorDTO(nombre, edad, documento));
 		
 		gestorJugador.registrarJugador();
+		
+		gui.mostrarMensaje();
 		}
 		
 	
