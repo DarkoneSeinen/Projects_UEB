@@ -15,9 +15,9 @@ public class PanelMenu extends JPanel {
 	private JButton btnjugador, btnjuego, btnpartida, btntorneo;
 	
 	public String JUGADOR="JUGADOR";
-	private String JUEGO="JUEGO";
-	private String PARTIDA="PARTIDA";
-	private String TORNEO="TORNEO";
+	public String JUEGO="JUEGO";
+	public String PARTIDA="PARTIDA";
+	public String TORNEO="TORNEO";
 	
 	public PanelMenu() {
 		setLayout(new GridLayout(2,2,10,10));

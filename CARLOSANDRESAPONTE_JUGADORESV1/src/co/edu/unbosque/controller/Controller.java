@@ -20,9 +20,24 @@ public class Controller implements ActionListener {
 		// TODO Auto-generated method stub
 		if(evento.getActionCommand().equals(gui.getMenu().JUGADOR)) {
 			gui.getJugador().setVisible(true);
-			
+			gui.getMenu().setVisible(false);
+
 			
 		}
+		
+		if(evento.getActionCommand().equals(gui.getMenu().JUEGO)) {
+			gui.getJuego().setVisible(true);
+			gui.getMenu().setVisible(false);
+			
+		}
+		
+		if(evento.getActionCommand().equals(gui.getMenu().TORNEO)) {
+			gui.getTorneo().setVisible(true);
+			gui.getMenu().setVisible(false);
+
+		}
+		
+		
 	}
 
 }

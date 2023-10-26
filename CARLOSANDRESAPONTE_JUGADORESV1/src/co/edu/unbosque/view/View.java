@@ -14,6 +14,8 @@ public class View extends JFrame {
 	
 	private PanelMenu menu;
 	private VentanaJugador jugador;
+	private VentanaJuego juego;
+	private VentanaTorneo torneo;
 	
 	
 	
@@ -31,8 +33,16 @@ public class View extends JFrame {
 		setLayout(new BorderLayout());
 		
 		menu= new PanelMenu();
+		
 		menu.getBtnjugador().addActionListener(control);
 		jugador = new VentanaJugador();
+		
+		menu.getBtnjuego().addActionListener(control);
+		juego= new VentanaJuego();
+		
+		menu.getBtntorneo().addActionListener(control);
+		torneo=new VentanaTorneo();
+	
 		
 		add(menu,BorderLayout.CENTER);
 		
@@ -59,6 +69,23 @@ public class View extends JFrame {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	public VentanaJuego getJuego() {
+		return juego;
+	}
+
+	public void setJuego(VentanaJuego juego) {
+		this.juego = juego;
+	}
+
+	public VentanaTorneo getTorneo() {
+		return torneo;
+	}
+
+	public void setTorneo(VentanaTorneo torneo) {
+		this.torneo = torneo;
+	}
+	
 	
 
 }
