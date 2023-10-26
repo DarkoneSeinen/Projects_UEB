@@ -38,10 +38,13 @@ public class VentanaJugador extends JFrame {
 		
 		Agregar= new JButton("AGREGAR");
 		
-		add(documento);
-		add(entradoc);
+		Agregar.setActionCommand(AGREGAR);
+		
+		
 		add(nombre);
 		add(entradanombre);
+		add(documento);
+		add(entradoc);
 		add(edad);
 		add(entradaedad);
 	

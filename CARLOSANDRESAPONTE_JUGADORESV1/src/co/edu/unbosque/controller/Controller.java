@@ -2,16 +2,20 @@ package co.edu.unbosque.controller;
 
 import java.awt.event.*;
 
+import co.edu.unbosque.model.*;
 import co.edu.unbosque.view.View;
 
 public class Controller implements ActionListener {
 	
 	private View gui;
+	private JugadorDAO gestorJugador;
 
 	public Controller() {
 		
 		gui = new View(this);
 		gui.setVisible(true);
+		
+		gestorJugador= new JugadorDAO();
 		
 	}
 
@@ -20,8 +24,7 @@ public class Controller implements ActionListener {
 		// TODO Auto-generated method stub
 		if(evento.getActionCommand().equals(gui.getMenu().JUGADOR)) {
 			gui.getJugador().setVisible(true);
-			gui.getMenu().setVisible(false);
-
+			
 			
 		}
 		
@@ -43,7 +46,21 @@ public class Controller implements ActionListener {
 		}
 		
 		
+		if(evento.getActionCommand().equals(gui.getJugador().AGREGAR)){
+		String nombre= gui.getJugador().getEntradanombre().getText();
+		int documento= Integer.parseInt(gui.getJugador().getEntradoc().getText()); 
+		int edad= Integer.parseInt(gui.getJugador().getEntradaedad().getText());
 		
+		System.out.println(nombre);
+		System.out.println(documento);
+		System.out.println(edad);
+		
+		gestorJugador.getJugador().add(new JugadorDTO(nombre, edad, documento));
+		
+		gestorJugador.registrarJugador();
+		}
+		
+	
 		
 	}
 

@@ -43,6 +43,9 @@ public class View extends JFrame {
 		menu.getBtnpartida().addActionListener(control);
 		partida=new VentanaPartida();
 		
+		///jugador//////////////////
+		jugador.getAgregar().addActionListener(control);
+		
 	
 		
 		add(menu,BorderLayout.CENTER);
