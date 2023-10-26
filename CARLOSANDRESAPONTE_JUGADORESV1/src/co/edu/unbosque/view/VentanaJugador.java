@@ -48,6 +48,9 @@ public class VentanaJugador extends JFrame {
 	
 		add(Agregar);
 		
+		
+
+		
 	}
 
 	public JLabel getDocumento() {
