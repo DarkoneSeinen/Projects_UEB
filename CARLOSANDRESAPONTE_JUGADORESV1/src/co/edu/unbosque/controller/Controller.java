@@ -37,6 +37,13 @@ public class Controller implements ActionListener {
 
 		}
 		
+		if(evento.getActionCommand().equals(gui.getMenu().PARTIDA)) {
+			gui.getPartida().setVisible(true);
+			gui.getMenu().setVisible(false);
+		}
+		
+		
+		
 		
 	}
 

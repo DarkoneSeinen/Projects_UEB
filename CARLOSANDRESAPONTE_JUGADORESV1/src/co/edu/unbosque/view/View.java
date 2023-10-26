@@ -16,11 +16,8 @@ public class View extends JFrame {
 	private VentanaJugador jugador;
 	private VentanaJuego juego;
 	private VentanaTorneo torneo;
+	private VentanaPartida partida;
 	
-	
-	
-;
-
 	public View(Controller control) {
 		// TODO Auto-generated constructor stub
 		
@@ -42,6 +39,10 @@ public class View extends JFrame {
 		
 		menu.getBtntorneo().addActionListener(control);
 		torneo=new VentanaTorneo();
+		
+		menu.getBtnpartida().addActionListener(control);
+		partida=new VentanaPartida();
+		
 	
 		
 		add(menu,BorderLayout.CENTER);
@@ -85,6 +86,15 @@ public class View extends JFrame {
 	public void setTorneo(VentanaTorneo torneo) {
 		this.torneo = torneo;
 	}
+
+	public VentanaPartida getPartida() {
+		return partida;
+	}
+
+	public void setPartida(VentanaPartida partida) {
+		this.partida = partida;
+	}
+	
 	
 	
 

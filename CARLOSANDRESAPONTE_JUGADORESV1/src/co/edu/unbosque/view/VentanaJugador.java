@@ -3,7 +3,6 @@ package co.edu.unbosque.view;
 import java.awt.*;
 
 import javax.swing.*;
-import javax.swing.JPanel;
 
 public class VentanaJugador extends JFrame {
 
