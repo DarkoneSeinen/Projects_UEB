@@ -55,7 +55,7 @@ public class View extends JFrame {
 	}
 	
 	public void mostrarMensaje() {
-		 JOptionPane.showMessageDialog(null,"jugador resgistrado");
+		 JOptionPane.showMessageDialog(null,"jugador resgistrado con exito");
 	}
 
 	public PanelMenu getMenu() {
