@@ -10,6 +10,8 @@ public class BinariosFile {
 	
 	private String ruta = "./data/jugadores.dat";
 	private String rutaJuego = "./data/juego.dat";
+	private String rutaPartida="./data/partidas.dat";
+	private String rutaTorneo= "./data/torneos.dat";
 
 	
 	private File f; 
