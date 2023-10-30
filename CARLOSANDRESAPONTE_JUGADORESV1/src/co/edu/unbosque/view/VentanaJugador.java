@@ -15,7 +15,7 @@ public class VentanaJugador extends JFrame {
 	private JButton Agregar, Modificar, Borrar;
 	
 	public final String AGREGAR="AGREGAR";
-	public final String MODIFICAR="AMODIFICAR";
+	public final String MODIFICAR="MODIFICAR";
 
 	public VentanaJugador() {
 		

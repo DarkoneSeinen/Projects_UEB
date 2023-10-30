@@ -14,9 +14,11 @@ public class VentanaJuego extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JLabel nombreJuego, tipoJuego;
 	private JTextField entradaNJuego, entradaTipo;
-	private JButton agregar;
+	private JButton agregar,modificar,borrar;
 	
 	public final String AGREGAR_JUEGO="AGREGAR_JUEGO";
+	public final String BORRAR_JUEGO="BORRAR_JUEGO";
+	public final String MODIFICAR_JUEGO="MODIFICAR_JUEGO";
 
 	
 	public VentanaJuego() {
@@ -28,7 +30,7 @@ public class VentanaJuego extends JFrame {
 		setLocationRelativeTo(null); 
 		setLayout(new BorderLayout());
 		
-		setLayout(new GridLayout(3, 2));
+		setLayout(new GridLayout(4, 3));
 		
 		nombreJuego= new JLabel("Nombre del juego: ");
 		entradaNJuego= new JTextField();
@@ -37,6 +39,8 @@ public class VentanaJuego extends JFrame {
 		entradaTipo= new JTextField();
 		
 		agregar= new JButton("AGREGAR_JUEGO");
+		modificar=new JButton("MODIFICAR_JUEGO");
+		borrar= new JButton("BORRAR_JUEGO");
 		
 		add(nombreJuego);
 		add(entradaNJuego);
@@ -44,6 +48,8 @@ public class VentanaJuego extends JFrame {
 		add(entradaTipo);
 		
 		add(agregar);
+		add(modificar);
+		add(borrar);
 		
 		agregar.setActionCommand(AGREGAR_JUEGO);
 		
