@@ -52,7 +52,8 @@ public class VentanaJuego extends JFrame {
 		add(borrar);
 		
 		agregar.setActionCommand(AGREGAR_JUEGO);
-		
+		modificar.setActionCommand(MODIFICAR_JUEGO);
+		borrar.setActionCommand(BORRAR_JUEGO);
 	}
 
 	public JLabel getNombreJuego() {

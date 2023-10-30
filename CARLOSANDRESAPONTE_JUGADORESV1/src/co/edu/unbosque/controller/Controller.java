@@ -48,7 +48,7 @@ public class Controller implements ActionListener {
 		}
 		
 		
-		if(evento.getActionCommand().equals(gui.getJugador().AGREGAR)){
+		if(evento.getActionCommand().equals(gui.getJugador().AGREGAR_JUGADOR)){
 		String nombre= gui.getJugador().getEntradanombre().getText();
 		int documento= Integer.parseInt(gui.getJugador().getEntradoc().getText()); 
 		int edad= Integer.parseInt(gui.getJugador().getEntradaedad().getText());

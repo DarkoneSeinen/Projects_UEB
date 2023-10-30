@@ -14,8 +14,9 @@ public class VentanaJugador extends JFrame {
 	private JTextField entradoc, entradanombre, entradaedad;
 	private JButton Agregar, Modificar, Borrar;
 	
-	public final String AGREGAR="AGREGAR";
-	public final String MODIFICAR="MODIFICAR";
+	public final String AGREGAR_JUGADOR="AGREGAR";
+	public final String MODIFICAR_JUGADOR="MODIFICAR";
+	public final String BORRAR_JUGADOR="MODIFICAR";
 
 	public VentanaJugador() {
 		
@@ -41,8 +42,9 @@ public class VentanaJugador extends JFrame {
 		Modificar= new JButton("MODIFICAR");
 		Borrar= new JButton("BORRAR");
 		
-		Agregar.setActionCommand(AGREGAR);
-		Modificar.setActionCommand(MODIFICAR);
+		Agregar.setActionCommand(AGREGAR_JUGADOR);
+		Modificar.setActionCommand(MODIFICAR_JUGADOR);
+		Borrar.setActionCommand(BORRAR_JUGADOR);
 		
 		
 		add(nombre);
@@ -122,7 +124,7 @@ public class VentanaJugador extends JFrame {
 	}
 
 	public String getAGREGAR() {
-		return AGREGAR;
+		return AGREGAR_JUGADOR;
 	}
 	
 	
