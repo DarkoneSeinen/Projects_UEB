@@ -3,12 +3,13 @@ package co.edu.unbosque.model.persistence;
 import java.io.*;
 import java.util.ArrayList;
 
+import co.edu.unbosque.model.JuegoDTO;
 import co.edu.unbosque.model.JugadorDTO;
 
 public class BinariosFile {
 	
-	private String ruta = "./data/jugador.out";
-	private String rutaReg = "./data/registro.out";
+	private String ruta = "./data/jugadores.dat";
+	private String rutaJuego = "./data/juego.dat";
 
 	
 	private File f; 
@@ -32,7 +33,6 @@ public class BinariosFile {
     	
     	return 0;
     	
-    	
     }
 
     public ArrayList<JugadorDTO>leerJugadores(){
@@ -48,6 +48,38 @@ public class BinariosFile {
     	}
     	return jugador;
     }
+    
+    //////////////////////////////////////////////////////////////////////////////
+    public int registrarJuegos(ArrayList<JuegoDTO> juegos) {
+    	
+    	try {
+    		oos= new ObjectOutputStream(new FileOutputStream(rutaJuego));
+    		oos.close();
+    	}catch(IOException e){
+    		return -1;
+    		
+    	}
+    	
+    	return 0;
+    	
+    }
+    
+    public ArrayList<JuegoDTO>leerJuegos(){
+    	ArrayList<JuegoDTO> juegos = null;
+    	
+    	try {
+    		ois = new ObjectInputStream(new FileInputStream(ruta));
+    		juegos = (ArrayList<JuegoDTO>)ois.readObject();
+    		ois.close();
+    	}catch(ClassNotFoundException|IOException e) {
+    		return null;
+    		
+    	}
+    	return juegos;
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    
+    
 
 
 }

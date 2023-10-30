@@ -16,6 +16,9 @@ public class VentanaJuego extends JFrame {
 	private JTextField entradaNJuego, entradaTipo;
 	private JButton agregar;
 	
+	public final String AGREGAR_JUEGO="AGREGAR_JUEGO";
+
+	
 	public VentanaJuego() {
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -33,7 +36,7 @@ public class VentanaJuego extends JFrame {
 		tipoJuego= new JLabel("tipo de juego");
 		entradaTipo= new JTextField();
 		
-		agregar= new JButton("AGREGAR");
+		agregar= new JButton("AGREGAR_JUEGO");
 		
 		add(nombreJuego);
 		add(entradaNJuego);
@@ -41,6 +44,8 @@ public class VentanaJuego extends JFrame {
 		add(entradaTipo);
 		
 		add(agregar);
+		
+		agregar.setActionCommand(AGREGAR_JUEGO);
 		
 	}
 

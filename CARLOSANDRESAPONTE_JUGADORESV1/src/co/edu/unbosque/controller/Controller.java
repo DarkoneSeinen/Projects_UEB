@@ -9,6 +9,7 @@ public class Controller implements ActionListener {
 	
 	private View gui;
 	private JugadorDAO gestorJugador;
+	private JuegoDAO gestorJuego;
 
 	public Controller() {
 		
@@ -16,6 +17,7 @@ public class Controller implements ActionListener {
 		gui.setVisible(true);
 		
 		gestorJugador= new JugadorDAO();
+		gestorJuego= new JuegoDAO();
 		
 	}
 
@@ -60,6 +62,21 @@ public class Controller implements ActionListener {
 		gestorJugador.registrarJugador();
 		
 		gui.mostrarMensaje();
+		}
+		
+		if (evento.getActionCommand().equals(gui.getJuego().AGREGAR_JUEGO)) {
+			String nombre=gui.getJuego().getEntradaNJuego().getText();
+			String tipoJueg= gui.getJuego().getEntradaTipo().getText();
+			
+			System.out.println(nombre);
+			System.out.println(tipoJueg);
+			
+			gestorJuego.getJuegos().add(new JuegoDTO(nombre, tipoJueg));
+			
+			gestorJuego.registrarJuego();
+			
+			gui.mostrarMensaje();
+			
 		}
 		
 	
