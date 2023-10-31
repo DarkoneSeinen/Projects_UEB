@@ -49,6 +49,12 @@ public class View extends JFrame {
 		
 		////juegos//////////////////////
 		juego.getAgregar().addActionListener(control);
+		
+		////partidas/////////////////////
+		partida.getAgregar().addActionListener(control);
+		
+		////torneo/////////////////////////////////
+		torneo.getAgregar().addActionListener(control);
 	
 		
 		add(menu,BorderLayout.CENTER);

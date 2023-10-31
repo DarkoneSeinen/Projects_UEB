@@ -14,17 +14,21 @@ public class VentanaTorneo extends JFrame {
 	
 	private JLabel partida,ganador;
 	private JTextField entradaPartida, EntradaGanador;
-	private JButton agregar;
+	private JButton agregar, modificar, borrar;
+	
+	public final String AGREGAR_TORNEO="AGREGAR_TORNEO";
+	public final String MODIFICAR_TORNEO="MODIFICAR_TORNEO";
+	public final String BORRAR_TORNEO="BORRAR_TORNEO";
 	
 	public VentanaTorneo(){
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(600, 600);
 		setResizable(false);
-		setTitle("Juego");
+		setTitle("Torneo");
 		setLocationRelativeTo(null); 
 		setLayout(new BorderLayout());
 		
-		setLayout(new GridLayout(3, 2));
+		setLayout(new GridLayout(4, 3));
 		
 		partida= new JLabel("Partida");
 		entradaPartida= new JTextField();
@@ -32,7 +36,9 @@ public class VentanaTorneo extends JFrame {
 		ganador = new JLabel("ganador");
 		EntradaGanador=new JTextField();
 		
-		agregar=new JButton("AGREGAR");
+		agregar=new JButton("AGREGAR_TORNEO");
+		modificar= new JButton("MODIFICAR_TORNEO");
+		borrar=new JButton("BORRAR_TORNEO");
 		
 		add(partida);
 		add(entradaPartida);
@@ -40,6 +46,12 @@ public class VentanaTorneo extends JFrame {
 		add(EntradaGanador);
 		
 		add(agregar);
+		add(modificar);
+		add(borrar);
+		
+		agregar.setActionCommand(AGREGAR_TORNEO);
+		modificar.setActionCommand(MODIFICAR_TORNEO);
+		borrar.setActionCommand(BORRAR_TORNEO);
 	}
 
 	public JLabel getPartida() {

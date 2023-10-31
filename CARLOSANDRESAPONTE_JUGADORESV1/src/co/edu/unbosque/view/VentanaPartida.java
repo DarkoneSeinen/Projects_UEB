@@ -13,18 +13,22 @@ public class VentanaPartida extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JLabel jugador1, jugador2;
 	private JTextField  entradaj1, entradaj2;
-	private JButton agregar;
+	private JButton agregar, modificar, borrar;
+	
+	public final String AGREGAR_PARTIDA="AGREGAR_PARTIDA";
+	public final String MODIFICAR_PARTIDA="MODIFICAR_PARTIDA";
+	public final String BORRAR_PARTIDA="BORRAR_PARTIDA";
 	
 	public VentanaPartida() {
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(600, 600);
 		setResizable(false);
-		setTitle("Juego");
+		setTitle("Partido");
 		setLocationRelativeTo(null); 
 		setLayout(new BorderLayout());
 		
-		setLayout(new GridLayout(3, 2));
+		setLayout(new GridLayout(4, 3));
 		
 		jugador1= new JLabel("Nombre del jugador 1: ");
 		entradaj1= new JTextField();
@@ -32,7 +36,9 @@ public class VentanaPartida extends JFrame {
 		jugador2= new JLabel("Nombre del jugador 2:");
 		entradaj2= new JTextField();
 		
-		agregar= new JButton("AGREGAR");
+		agregar= new JButton("AGREGAR_PARTIDA");
+		modificar= new JButton("MODIFICAR_PARTIDA");
+		borrar=new JButton("BORRAR_PARTIDA");
 		
 		add(jugador1);
 		add(entradaj1);
@@ -40,7 +46,12 @@ public class VentanaPartida extends JFrame {
 		add(entradaj2);
 		
 		add(agregar);
+		add(modificar);
+		add(borrar);
 		
+		agregar.setActionCommand(AGREGAR_PARTIDA);
+		modificar.setActionCommand(MODIFICAR_PARTIDA);
+		borrar.setActionCommand(BORRAR_PARTIDA);
 	}
 
 	public JLabel getJugador1() {

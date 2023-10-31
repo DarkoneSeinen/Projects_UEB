@@ -3,8 +3,7 @@ package co.edu.unbosque.model.persistence;
 import java.io.*;
 import java.util.ArrayList;
 
-import co.edu.unbosque.model.JuegoDTO;
-import co.edu.unbosque.model.JugadorDTO;
+import co.edu.unbosque.model.*;
 
 public class BinariosFile {
 	
@@ -70,7 +69,7 @@ public class BinariosFile {
     	ArrayList<JuegoDTO> juegos = null;
     	
     	try {
-    		ois = new ObjectInputStream(new FileInputStream(ruta));
+    		ois = new ObjectInputStream(new FileInputStream(rutaJuego));
     		juegos = (ArrayList<JuegoDTO>)ois.readObject();
     		ois.close();
     	}catch(ClassNotFoundException|IOException e) {
@@ -81,7 +80,63 @@ public class BinariosFile {
     }
     ////////////////////////////////////////////////////////////////////////////////////////////
     
+    public int registrarPartidas(ArrayList<PartidaDTO> partidas) {
+    	
+    	try {
+    		oos= new ObjectOutputStream(new FileOutputStream(rutaPartida));
+    		oos.close();
+    	}catch(IOException e){
+    		return -1;
+    		
+    	}
+    	
+    	return 0;
+    	
+    }
     
+    public ArrayList<PartidaDTO>leerPartidas(){
+    	ArrayList<PartidaDTO> partidas = null;
+    	
+    	try {
+    		ois = new ObjectInputStream(new FileInputStream(rutaPartida));
+    		partidas = (ArrayList<PartidaDTO>)ois.readObject();
+    		ois.close();
+    	}catch(ClassNotFoundException|IOException e) {
+    		return null;
+    		
+    	}
+    	return partidas;
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    
+    public int registrarTorneos(ArrayList<TorneoDTO> torneos) {
+    	
+    	try {
+    		oos= new ObjectOutputStream(new FileOutputStream(rutaTorneo));
+    		oos.close();
+    	}catch(IOException e){
+    		return -1;
+    		
+    	}
+    	
+    	return 0;
+    	
+    }
+    
+    public ArrayList<TorneoDTO>leerTorneos(){
+    	ArrayList<TorneoDTO> torneos = null;
+    	
+    	try {
+    		ois = new ObjectInputStream(new FileInputStream(rutaTorneo));
+    		torneos = (ArrayList<TorneoDTO>)ois.readObject();
+    		ois.close();
+    	}catch(ClassNotFoundException|IOException e) {
+    		return null;
+    		
+    	}
+    	return torneos;
+    }
 
 
 }
