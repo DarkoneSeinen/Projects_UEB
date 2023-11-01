@@ -16,7 +16,7 @@ public class VentanaJugador extends JFrame {
 	
 	public final String AGREGAR_JUGADOR="AGREGAR";
 	public final String MODIFICAR_JUGADOR="MODIFICAR";
-	public final String BORRAR_JUGADOR="MODIFICAR";
+	public final String BORRAR_JUGADOR="BORRAR";
 
 	public VentanaJugador() {
 		
@@ -125,6 +125,22 @@ public class VentanaJugador extends JFrame {
 
 	public String getAGREGAR() {
 		return AGREGAR_JUGADOR;
+	}
+
+	public JButton getModificar() {
+		return Modificar;
+	}
+
+	public void setModificar(JButton modificar) {
+		Modificar = modificar;
+	}
+
+	public JButton getBorrar() {
+		return Borrar;
+	}
+
+	public void setBorrar(JButton borrar) {
+		Borrar = borrar;
 	}
 	
 	

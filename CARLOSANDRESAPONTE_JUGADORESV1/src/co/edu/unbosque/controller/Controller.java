@@ -1,6 +1,7 @@
 package co.edu.unbosque.controller;
 
 import java.awt.event.*;
+import java.util.ArrayList;
 
 import co.edu.unbosque.model.*;
 import co.edu.unbosque.view.View;
@@ -31,24 +32,60 @@ public class Controller implements ActionListener {
 		/////////////////////JUGADOR//////////////////////////////////////////
 		if(evento.getActionCommand().equals(gui.getMenu().JUGADOR)) {
 			gui.getJugador().setVisible(true);
-			
+			gui.mostrarMensaje("Jugadores actuales:\n" + gestorJugador.toString());
 			
 		}
 		
 		if(evento.getActionCommand().equals(gui.getJugador().AGREGAR_JUGADOR)){
-		String nombre= gui.getJugador().getEntradanombre().getText();
-		int documento= Integer.parseInt(gui.getJugador().getEntradoc().getText()); 
-		int edad= Integer.parseInt(gui.getJugador().getEntradaedad().getText());
+			String nombre= gui.getJugador().getEntradanombre().getText();
+			int documento= Integer.parseInt(gui.getJugador().getEntradoc().getText()); 
+			int edad= Integer.parseInt(gui.getJugador().getEntradaedad().getText());
+			
 		
-		System.out.println(nombre);
-		System.out.println(documento);
-		System.out.println(edad);
+			
+			gestorJugador.getJugador().add(new JugadorDTO(nombre, edad, documento));
+			
+			gestorJugador.registrarJugador();
+			
+			gui.mostrarMensaje("jugador resgistrado con exito");
+			
+			gui.mostrarMensaje("Jugadores actuales:\n" + gestorJugador.toString());
+		}
 		
-		gestorJugador.getJugador().add(new JugadorDTO(nombre, edad, documento));
+		if (evento.getActionCommand().equals(gui.getJugador().MODIFICAR_JUGADOR)) {
+			int documento = gui.obtenerDocumento();
+			JugadorDTO jugador = gestorJugador.revisarJugador(documento);
+			
+			if (jugador == null) {
+				gui.mostrarMensaje("El jugador con el documento ingresado no existe");
+			} else {
+				String nombreAModificar = gui.getJugador().getEntradanombre().getText();
+				int documentoAModificar= Integer.parseInt(gui.getJugador().getEntradoc().getText()); 
+				int edadAModificar= Integer.parseInt(gui.getJugador().getEntradaedad().getText());
+				
+				jugador = new JugadorDTO(nombreAModificar, edadAModificar, documentoAModificar);
+				int indice = gestorJugador.obtenerIndiceJugadorAModificar(documento);
+				gestorJugador.modificarJugador(indice, jugador);
+				gui.mostrarMensaje("Jugador modificado con exito.\nJugadores Actuales:\n" + gestorJugador.toString());
+			}
+		}
 		
-		gestorJugador.registrarJugador();
-		
-		gui.mostrarMensaje();
+		if (evento.getActionCommand().equals(gui.getJugador().BORRAR_JUGADOR)) {
+			int documento = gui.obtenerDocumento();
+			JugadorDTO jugador = gestorJugador.revisarJugador(documento);
+			
+			if (jugador == null) {
+				gui.mostrarMensaje("El jugador con el documento ingresado no existe");
+			} else {
+				String nombreAModificar = gui.getJugador().getEntradanombre().getText();
+				int documentoAModificar= Integer.parseInt(gui.getJugador().getEntradoc().getText()); 
+				int edadAModificar= Integer.parseInt(gui.getJugador().getEntradaedad().getText());
+				
+				jugador = new JugadorDTO(nombreAModificar, edadAModificar, documentoAModificar);
+				int indice = gestorJugador.obtenerIndiceJugadorAModificar(documento);
+				gestorJugador.borrarJugador(indice);
+				gui.mostrarMensaje("Jugador borrado con exito.\nJugadores Actuales:\n" + gestorJugador.toString());
+			}
 		}
 		
 		
@@ -70,7 +107,7 @@ public class Controller implements ActionListener {
 			
 			gestorJuego.registrarJuego();
 			
-			gui.mostrarMensaje();
+			gui.mostrarMensaje("juego resgistrado con exito");
 			
 		}
 		

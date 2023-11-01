@@ -45,6 +45,8 @@ public class View extends JFrame {
 		
 		///jugador//////////////////
 		jugador.getAgregar().addActionListener(control);
+		jugador.getModificar().addActionListener(control);
+		jugador.getBorrar().addActionListener(control);
 		
 		
 		////juegos//////////////////////
@@ -63,8 +65,19 @@ public class View extends JFrame {
 		
 	}
 	
-	public void mostrarMensaje() {
-		 JOptionPane.showMessageDialog(null,"jugador resgistrado con exito");
+	public void mostrarMensaje(String mensaje) {
+		 JOptionPane.showMessageDialog(null,mensaje);
+	}
+	
+	public int obtenerDocumento() {
+		String entrada = JOptionPane.showInputDialog(null, "Digite el documento del jugador", "Documento", JOptionPane.QUESTION_MESSAGE);
+		int documento = 0;
+		try {
+			documento = Integer.parseInt(entrada);
+		} catch (NumberFormatException e) {
+			mostrarMensaje("La entrada no es válida");
+		}
+		return documento;
 	}
 
 	public PanelMenu getMenu() {
