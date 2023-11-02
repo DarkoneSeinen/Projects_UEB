@@ -97,6 +97,34 @@ public class VentanaTorneo extends JFrame {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	public JButton getModificar() {
+		return modificar;
+	}
+
+	public void setModificar(JButton modificar) {
+		this.modificar = modificar;
+	}
+
+	public JButton getBorrar() {
+		return borrar;
+	}
+
+	public void setBorrar(JButton borrar) {
+		this.borrar = borrar;
+	}
+
+	public String getAGREGAR_TORNEO() {
+		return AGREGAR_TORNEO;
+	}
+
+	public String getMODIFICAR_TORNEO() {
+		return MODIFICAR_TORNEO;
+	}
+
+	public String getBORRAR_TORNEO() {
+		return BORRAR_TORNEO;
+	}
 	
 	
 }

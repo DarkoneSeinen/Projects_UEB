@@ -100,16 +100,53 @@ public class Controller implements ActionListener {
 			String nombre=gui.getJuego().getEntradaNJuego().getText();
 			String tipoJueg= gui.getJuego().getEntradaTipo().getText();
 			
-			System.out.println(nombre);
-			System.out.println(tipoJueg);
 			
 			gestorJuego.getJuegos().add(new JuegoDTO(nombre, tipoJueg));
 			
 			gestorJuego.registrarJuego();
 			
 			gui.mostrarMensaje("juego resgistrado con exito");
+			gui.mostrarMensaje("Juegos actuales:\n" + gestorJuego.toString());
+
 			
 		}
+		
+		if (evento.getActionCommand().equals(gui.getJuego().MODIFICAR_JUEGO)) {
+			String nombreIngresado = gui.obtenerNombreJuego();
+			JuegoDTO juegos = gestorJuego.revisarJuego(nombreIngresado);
+			
+			if (juegos== null) {
+				gui.mostrarMensaje("El juego con el nombre ingresado no existe");
+			} else {
+				String nombreAModificar = gui.getJuego().getEntradaNJuego().getText();
+				String tipoAModificar = gui.getJuego().getEntradaTipo().getText();
+
+				
+				juegos = new JuegoDTO(nombreAModificar, tipoAModificar);
+				int indice = gestorJuego.obtenerIndiceJuegoAModificar(nombreIngresado);
+				gestorJuego.modificarJuego(indice, juegos);
+				gui.mostrarMensaje("Juego modificado con exito.\nJugadores Actuales:\n" + gestorJuego.toString());
+			}
+		}
+		
+		if (evento.getActionCommand().equals(gui.getJuego().BORRAR_JUEGO)) {
+			String nombreIngresado = gui.obtenerNombreJuego();
+			JuegoDTO juego = gestorJuego.revisarJuego(nombreIngresado);
+			
+			if (juego == null) {
+				gui.mostrarMensaje("El juego con el nombre ingresado no existe");
+			} else {
+				String nombreAModificar = gui.getJuego().getEntradaNJuego().getText();
+				String tipoAModificar = gui.getJuego().getEntradaTipo().getText();
+								
+				juego = new JuegoDTO(nombreAModificar, tipoAModificar);
+				int indice = gestorJuego.obtenerIndiceJuegoAModificar(nombreIngresado);
+				gestorJuego.borrarJuego(indice);
+				gui.mostrarMensaje("Juego borrado con exito.\nJuegos Actuales:\n" + gestorJuego.toString());
+			}
+		}
+		
+		
 		
 		//////////////////////////////////////PARTIDAS//////////////////////////////////
 		if(evento.getActionCommand().equals(gui.getMenu().PARTIDA)) {
@@ -121,13 +158,49 @@ public class Controller implements ActionListener {
 			String nombre1=gui.getPartida().getEntradaj1().getText();
 			String nombre2=gui.getPartida().getEntradaj2().getText();
 			
-			System.out.println(nombre1);
-			System.out.println(nombre2);
+			
 			
 			gestorPartida.getPartidas().add(new PartidaDTO(nombre1,nombre2));
 			
-			gestorPartida.registrarPartidas();;
+			gestorPartida.registrarPartidas();
+			gui.mostrarMensaje("Partidas actuales:\n" + gestorPartida.toString());
+
 			
+		}
+		
+		if (evento.getActionCommand().equals(gui.getPartida().MODIFICAR_PARTIDA)) {
+			String nombreNuevo = gui.obtenerNombreJuego();
+			PartidaDTO nombreN = gestorPartida.revisarPartida(nombreNuevo);
+			
+			if (nombreN== null) {
+				gui.mostrarMensaje("La partida con el nombre ingresado no existe");
+			} else {
+				String nombre1AModificar = gui.getPartida().getEntradaj1().getText();
+				String nombre2AModificar = gui.getPartida().getEntradaj2().getText();
+
+				
+				nombreN = new PartidaDTO(nombre1AModificar,nombre2AModificar);
+				int indice = gestorPartida.obtenerIndicePartidaAModificar(nombreNuevo);
+				gestorPartida.modificarPartida(indice, nombreN);
+				gui.mostrarMensaje("Partida modificada con exito.\nPartida Actuales:\n" + gestorPartida.toString());
+			}
+		}
+		
+		if (evento.getActionCommand().equals(gui.getPartida().BORRAR_PARTIDA)) {
+			String nombreIngresado = gui.obtenerNombrePartida();
+			PartidaDTO partida = gestorPartida.revisarPartida(nombreIngresado);
+			
+			if (partida == null) {
+				gui.mostrarMensaje("La partida con el nombre ingresado no existe");
+			} else {
+				String nombre1AModificar = gui.getPartida().getEntradaj1().getText();
+				String nombre2AModificar= gui.getPartida().getEntradaj2().getText();
+								
+				partida = new PartidaDTO(nombre1AModificar, nombre2AModificar);
+				int indice = gestorPartida.obtenerIndicePartidaAModificar(nombreIngresado);
+				gestorPartida.borrarPartida(indice);
+				gui.mostrarMensaje("Partida borrada con exito.\nPartidas Actuales:\n" + gestorPartida.toString());
+			}
 		}
 		
 		
@@ -135,13 +208,12 @@ public class Controller implements ActionListener {
 		
 		if(evento.getActionCommand().equals(gui.getMenu().TORNEO)) {
 			gui.getTorneo().setVisible(true);
-			gui.getMenu().setVisible(false);
 
 		}
 		
 		if(evento.getActionCommand().equals(gui.getTorneo().AGREGAR_TORNEO)) {
-			String ganador=gui.getTorneo().getEntradaGanador().getText();
 			int partida=Integer.parseInt(gui.getTorneo().getEntradaPartida().getText());
+			String ganador=gui.getTorneo().getEntradaGanador().getText();
 			
 			System.out.println(ganador);
 			System.out.println(partida);
@@ -150,6 +222,8 @@ public class Controller implements ActionListener {
 
 			gestorTorneo.registrarTorneo();
 		}
+		
+		
 		
 	
 		

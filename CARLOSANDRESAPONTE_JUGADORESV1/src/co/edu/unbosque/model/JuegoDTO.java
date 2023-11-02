@@ -43,6 +43,7 @@ public class JuegoDTO implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
 	
 	
 	

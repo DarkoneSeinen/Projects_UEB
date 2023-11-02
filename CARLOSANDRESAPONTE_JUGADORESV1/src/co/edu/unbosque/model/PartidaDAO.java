@@ -16,7 +16,44 @@ public class PartidaDAO {
 		bf= new BinariosFile();
 
 	}
+    public String toString() {
+		String partidasActuales = "";
+		for (int i = 0; i < partidas.size(); i++) {
+			partidasActuales += "Juego " + (i+1) + "\n";
+			partidasActuales += "Nombre 1: " + partidas.get(i).getNombre1() + "\n";
+			partidasActuales += "Nombre 2: " +  partidas.get(i).getNombre2() + "\n";
+		}
+		if (partidasActuales.equals("")) {
+			partidasActuales += "No se han registrado partidas hasta ahora\n";
+		}
+		return partidasActuales;
+	}
     
+    public int obtenerIndicePartidaAModificar(String nombre ) {
+		for (int i = 0; i < partidas.size(); i++) {
+			if (partidas.get(i).getNombre1().equals(nombre)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+    
+    public void modificarPartida(int indice,PartidaDTO partida) {
+		partidas.set(indice, partida);
+	}
+    
+    public PartidaDTO revisarPartida(String nombre) {
+		for (int i = 0; i < partidas.size(); i++) {
+			if (partidas.get(i).getNombre1().equals(nombre)) {
+				return partidas.get(i);
+			}
+		}
+		return null;
+	}
+    
+	public void borrarPartida(int indice) {
+		partidas.remove(indice);
+	}
 	public void agregarPartida(PartidaDTO partida) {
 		partidas.add(partida);
 	}
@@ -44,6 +81,7 @@ public class PartidaDAO {
 	public void setBf(BinariosFile bf) {
 		this.bf = bf;
 	}
+	
 	
 	
 

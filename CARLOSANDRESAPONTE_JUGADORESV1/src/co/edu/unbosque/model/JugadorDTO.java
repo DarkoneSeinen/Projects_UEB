@@ -54,6 +54,7 @@ public class JugadorDTO implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	
 
 
 

@@ -99,6 +99,35 @@ public class VentanaJuego extends JFrame {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	public JButton getModificar() {
+		return modificar;
+	}
+
+	public void setModificar(JButton modificar) {
+		this.modificar = modificar;
+	}
+
+	public JButton getBorrar() {
+		return borrar;
+	}
+
+	public void setBorrar(JButton borrar) {
+		this.borrar = borrar;
+	}
+
+	public String getAGREGAR_JUEGO() {
+		return AGREGAR_JUEGO;
+	}
+
+	public String getBORRAR_JUEGO() {
+		return BORRAR_JUEGO;
+	}
+
+	public String getMODIFICAR_JUEGO() {
+		return MODIFICAR_JUEGO;
+	}
+	
 	
 	
 

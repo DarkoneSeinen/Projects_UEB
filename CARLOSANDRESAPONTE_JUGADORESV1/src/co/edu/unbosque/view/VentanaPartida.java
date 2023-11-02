@@ -97,6 +97,35 @@ public class VentanaPartida extends JFrame {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+	public JButton getModificar() {
+		return modificar;
+	}
+
+	public void setModificar(JButton modificar) {
+		this.modificar = modificar;
+	}
+
+	public JButton getBorrar() {
+		return borrar;
+	}
+
+	public void setBorrar(JButton borrar) {
+		this.borrar = borrar;
+	}
+
+	public String getAGREGAR_PARTIDA() {
+		return AGREGAR_PARTIDA;
+	}
+
+	public String getMODIFICAR_PARTIDA() {
+		return MODIFICAR_PARTIDA;
+	}
+
+	public String getBORRAR_PARTIDA() {
+		return BORRAR_PARTIDA;
+	}
+	
 	
 	
 

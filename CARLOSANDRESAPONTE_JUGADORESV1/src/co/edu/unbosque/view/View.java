@@ -51,12 +51,19 @@ public class View extends JFrame {
 		
 		////juegos//////////////////////
 		juego.getAgregar().addActionListener(control);
+		juego.getModificar().addActionListener(control);
+		juego.getBorrar().addActionListener(control);
 		
 		////partidas/////////////////////
 		partida.getAgregar().addActionListener(control);
+		partida.getModificar().addActionListener(control);
+		partida.getBorrar().addActionListener(control);
+	
 		
 		////torneo/////////////////////////////////
 		torneo.getAgregar().addActionListener(control);
+		torneo.getModificar().addActionListener(control);
+		torneo.getBorrar().addActionListener(control);
 	
 		
 		add(menu,BorderLayout.CENTER);
@@ -78,6 +85,26 @@ public class View extends JFrame {
 			mostrarMensaje("La entrada no es válida");
 		}
 		return documento;
+	}
+	
+	public String obtenerNombreJuego() {
+		String nombre = JOptionPane.showInputDialog(null, "Digite el nombre del juego");
+		return nombre;
+	}
+	
+	public int obtenerParida() {
+		String entrada = JOptionPane.showInputDialog(null, "Digite la partida que desea buscar", "Partida", JOptionPane.QUESTION_MESSAGE);
+		int partidaTorneo = 0;
+		try {
+			partidaTorneo = Integer.parseInt(entrada);
+		} catch (NumberFormatException e) {
+			mostrarMensaje("La entrada no es válida");
+		}
+		return partidaTorneo;
+	}
+	public String obtenerNombrePartida() {
+		String nombre = JOptionPane.showInputDialog(null, "Digite el 1 nombre ingresado");
+		return nombre;
 	}
 
 	public PanelMenu getMenu() {
