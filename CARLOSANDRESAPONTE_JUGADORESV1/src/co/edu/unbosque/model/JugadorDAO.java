@@ -20,6 +20,7 @@ public class JugadorDAO {
 	
 	public String toString() {
 		String jugadoresActuales = "";
+		
 		for (int i = 0; i < jugadores.size(); i++) {
 			jugadoresActuales += "Jugador " + (i+1) + "\n";
 			jugadoresActuales += "Edad: " + jugadores.get(i).getEdad() + "\n";
