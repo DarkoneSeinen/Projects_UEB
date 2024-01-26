@@ -92,7 +92,7 @@ public class Controller implements ActionListener {
 		//////////////////////////////////JUEGO//////////////////////////////////
 		if(evento.getActionCommand().equals(gui.getMenu().JUEGO)) {
 			gui.getJuego().setVisible(true);
-			gui.getMenu().setVisible(false);
+			gui.mostrarMensaje("Juegos actuales:\n" + gestorJuego.toString());
 			
 		}
 		
@@ -151,7 +151,8 @@ public class Controller implements ActionListener {
 		//////////////////////////////////////PARTIDAS//////////////////////////////////
 		if(evento.getActionCommand().equals(gui.getMenu().PARTIDA)) {
 			gui.getPartida().setVisible(true);
-			gui.getMenu().setVisible(false);
+			gui.mostrarMensaje("Partidas actuales:\n" + gestorPartida.toString());
+
 		}
 		
 		if(evento.getActionCommand().equals(gui.getPartida().AGREGAR_PARTIDA)) {
@@ -208,6 +209,8 @@ public class Controller implements ActionListener {
 		
 		if(evento.getActionCommand().equals(gui.getMenu().TORNEO)) {
 			gui.getTorneo().setVisible(true);
+			gui.mostrarMensaje("Torneos actuales:\n" + gestorTorneo.toString());
+
 
 		}
 		

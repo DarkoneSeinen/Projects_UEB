@@ -15,6 +15,7 @@ public class JugadorDAO {
 		
 		bf= new BinariosFile();
 		jugadores = bf.leerJugadores();
+		jugadores= new ArrayList<JugadorDTO>() ;
 		
 	}
 	
