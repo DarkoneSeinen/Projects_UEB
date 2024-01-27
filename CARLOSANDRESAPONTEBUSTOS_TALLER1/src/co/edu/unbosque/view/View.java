@@ -15,7 +15,7 @@ public class View extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 
-	public Menu menu;
+	public PanelMenu panelMenu;
 	
 	
 
@@ -35,14 +35,14 @@ public class View extends JFrame {
 		
 		
 		
-        menu= new Menu();
+        panelMenu= new PanelMenu();
       
         
-		menu.getBtncirculo().addActionListener(control);
-		menu.getBtncuadrado().addActionListener(control);
+		panelMenu.getBtncirculo().addActionListener(control);
+		panelMenu.getBtncuadrado().addActionListener(control);
 		
 		
-		add(menu,BorderLayout.CENTER);
+		add(panelMenu,BorderLayout.CENTER);
 
 		
 	}
@@ -77,14 +77,14 @@ public class View extends JFrame {
 
 
 
-	public Menu getMenu() {
-		return menu;
+	public PanelMenu getMenu() {
+		return panelMenu;
 	}
 
 
 
-	public void setMenu(Menu menu) {
-		this.menu = menu;
+	public void setMenu(PanelMenu panelMenu) {
+		this.panelMenu = panelMenu;
 	}
 
 

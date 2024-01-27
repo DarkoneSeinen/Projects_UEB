@@ -21,7 +21,9 @@ public class Figuras implements Circulo,Cuadrado{
 	@Override
 	public double calcularareaCirc() {
 		// TODO Auto-generated method stub
-		return Math.PI*Math.pow(diametro, 2);
+		
+		double radio= diametro/2;
+		return Math.PI*Math.pow(radio, 2);
 	}
 
 	@Override

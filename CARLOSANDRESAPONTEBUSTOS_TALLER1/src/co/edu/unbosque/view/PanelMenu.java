@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
-public class Menu extends JPanel {
+public class PanelMenu extends JPanel {
 
 	/**
 	 * 
@@ -20,7 +20,7 @@ public class Menu extends JPanel {
 
 	
 	
-	public Menu() {
+	public PanelMenu() {
 		
 		setLayout(new GridLayout(3,1));
 		TitledBorder border = BorderFactory.createTitledBorder("Bienvenido");
